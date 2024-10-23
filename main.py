@@ -5,6 +5,11 @@ import requests
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return 'Hello, World!'
+
+
 def ping_site():
     try:
         requests.get("https://gerenciamentojaguar.onrender.com")
