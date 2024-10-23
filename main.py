@@ -10,11 +10,11 @@ def ping_site():
         requests.get("https://gerenciamentojaguar.onrender.com")
         requests.get("https://pedrorochaconsultoria.onrender.com")
         print('Request Sent')
-    except:
-        print('Error ')
+    except Exception as e:
+        print(f'Error: {e}')
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(ping_site, 'interval', minutes=1)
+scheduler.add_job(ping_site, 'interval', minutes=5)
 scheduler.start()
 
 if __name__ == '__main__':
