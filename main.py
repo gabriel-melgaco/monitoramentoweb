@@ -11,11 +11,11 @@ def ping_site():
         requests.get("https://pedrorochaconsultoria.onrender.com")
         print('Request Sent')
     except:
-        pass
+        print('Error ')
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(ping_site, 'interval', minutes=1)
 scheduler.start()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
