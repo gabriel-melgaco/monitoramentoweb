@@ -9,7 +9,7 @@ def index():
     return 'Hello, World!'
 
 def ping_site():
-    urls = ["https://gerenciamentojaguar.onrender.com", "https://pedrorochaconsultoria.onrender.com"]
+    urls = ["https://gerenciamentojaguar.onrender.com", "https://pedrorochaconsultoria.onrender.com", "https://gremiofalcao.onrender.com"]
     headers = {'User-Agent': 'Mozilla/5.0'}  # Adicionando cabeçalhos para simular uma requisição legítima
 
     for url in urls:
